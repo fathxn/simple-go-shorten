@@ -20,4 +20,6 @@ type URLRepository interface {
 }
 
 type URLUsecase interface {
+	Create(ctx context.Context, longURL string) error
+	Redirect(ctx context.Context) error
 }
